@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plasma-donor-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: plasmadonor
+  template:
+    metadata:
+      labels:
+        app: plasmadonor
+    spec:
+      containers:
+      - name: plasmadonor
+        image: icr.io/ibmapp/apprepo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login.css')}}">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="titlediv">
+            Plasma Donor
+        </div>
+
+    </div>
+    <div class="contentbody">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="signup">
+                <form action="/signup" method="POST">
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="username" placeholder="User name" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pwd" placeholder="Password" required="">
+                    <button>Sign up</button>
+                </form>
+            </div>
+
+            <div class="login">
+                <form action="/login" method="POST">
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pwd" placeholder="Password" required="">
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
