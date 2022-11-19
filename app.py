@@ -183,8 +183,6 @@ def donation():
 
 def sendgridmail(to_mail_id):
     try:
-        sg = sendgrid.SendGridAPIClient(
-            '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')
     # Change to your verified sender
         from_email = Email("kencydanielfdo@gmail.com")
         to_email = To(to_mail_id)  # Change to your recipient
